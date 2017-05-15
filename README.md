@@ -8,4 +8,4 @@ $ pip install Tkinter or apt-get install python-tkinter
 
 just launch python wannacry.py  
 
-![application](https://www.cuby-hebergs.com/dl/wannacry.png)
+![application](https://www.cuby-hebergs.com/dl/wannacry2.png)
