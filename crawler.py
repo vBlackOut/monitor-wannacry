@@ -64,16 +64,23 @@ def crawler_wannacrypt():
             responseStart
 
         getwanna_online = WebDriverWait(navigateur, 12).until(EC.presence_of_element_located((By.XPATH, "//div[@class='col-md-4']/div/div")))
+        getwanna_maps = WebDriverWait(navigateur, 12).until(EC.presence_of_element_located((By.XPATH, "//script")))
+        getwanna_maps = navigateur.execute_script("return region_count")
         if "1m" in url:
-            print(getwanna_online.get_attribute("innerHTML") + " in 1 minutes")
+            print(getwanna_online.get_attribute("innerHTML") + " in 1 minutes total world")
+            print(str(getwanna_maps["FR"]) + " in france on 1 minutes")
         if "5m" in url:
-            print(getwanna_online.get_attribute("innerHTML") + " in 5 minutes")
+            print(getwanna_online.get_attribute("innerHTML") + " in 5 minutes total world")
+            print(str(getwanna_maps["FR"]) + " in france on 5 minutes")
         if "30m" in url:
-            print(getwanna_online.get_attribute("innerHTML") + " in 30 minutes")
+            print(getwanna_online.get_attribute("innerHTML") + " in 30 minutes total world")
+            print(str(getwanna_maps["FR"]) + " in france on 30 minutes")
         if "1h" in url:
-            print(getwanna_online.get_attribute("innerHTML") + " in 1 heures")
+            print(getwanna_online.get_attribute("innerHTML") + " in 1 heures total world")
+            print(str(getwanna_maps["FR"]) + " in france on 1 hours")
         if "24h" in url:
-            print(getwanna_online.get_attribute("innerHTML") + " in 24 heures")
+            print(getwanna_online.get_attribute("innerHTML") + " in 24 heures total world")
+            print(str(getwanna_maps["FR"]) + " in france on 24 hours")
 
     print("")
     print("Terminer.")

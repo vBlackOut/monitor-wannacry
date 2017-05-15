@@ -11,10 +11,20 @@ def Draw(oldframe=None):
     status = p.returncode
     print status
     if status:
-        text = Tkinter.Text(frame, height=5, width=30)
+        text = Tkinter.Text(frame, height=10, width=32)
         text.insert(Tkinter.END, str(output))
+        #text.highlight_pattern("word", "red")
         text.pack()
-
+        text.tag_add("start", "1.0", "1.30")
+        text.tag_config("start", background="black", foreground="yellow")
+        text.tag_add("start-2", "3.0", "3.30")
+        text.tag_config("start-2", background="black", foreground="yellow")
+        text.tag_add("start-3", "5.0", "5.32")
+        text.tag_config("start-3", background="black", foreground="yellow")
+        text.tag_add("start-4", "7.0", "7.32")
+        text.tag_config("start-4", background="black", foreground="yellow")
+        text.tag_add("start-4", "9.0", "9.32")
+        text.tag_config("start-4", background="black", foreground="yellow")
         if oldframe is not None:
             oldframe.destroy() # cleanup
         return frame
