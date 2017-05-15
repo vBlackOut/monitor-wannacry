@@ -1,5 +1,5 @@
 # monitor-wannacry
-live views moitor propagation virus wannacry
+live views monitor propagation virus wannacry
 
 # dependance
 $ pip install selenium  
